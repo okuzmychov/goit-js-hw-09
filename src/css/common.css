@@ -19,7 +19,7 @@ img {
 
 .timer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .field {
