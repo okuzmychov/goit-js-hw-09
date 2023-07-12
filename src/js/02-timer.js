@@ -16,15 +16,16 @@ const datePicker = flatpickr("#datetime-picker", {
       startButton.disabled = true;
     } else {
       startButton.disabled = false;
-      startButton.addEventListener("click", () => {
-        startTimer(selectedDate);
-      });
-    }
+      }
   },
+});
+startButton.addEventListener("click", () => {
+  const selectedDate = datePicker.selectedDates[0];
+  startTimer(selectedDate);
 });
 
 function startTimer(endDate) {
-  // startButton.disabled = true;
+  startButton.disabled = true;
   const timerFields = {
     days: document.querySelector("[data-days]"),
     hours: document.querySelector("[data-hours]"),
