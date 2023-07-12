@@ -13,10 +13,13 @@ const datePicker = flatpickr("#datetime-picker", {
     if (selectedDate < currentDate) {
       window.alert("Please choose a date in the future");
     } else {
+      this._input.disabled = true;
       startTimer(selectedDate);
     }
   },
 });
+
+const startButton = document.querySelector("[data-start]");
 
 function startTimer(endDate) {
   const startButton = document.querySelector("[data-start]");
