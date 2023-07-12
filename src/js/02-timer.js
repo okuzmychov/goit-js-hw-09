@@ -22,7 +22,6 @@ const datePicker = flatpickr("#datetime-picker", {
 const startButton = document.querySelector("[data-start]");
 
 function startTimer(endDate) {
-  const startButton = document.querySelector("[data-start]");
   startButton.disabled = true;
 
   const timerFields = {
